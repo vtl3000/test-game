@@ -80,7 +80,6 @@ class Map implements IMap
         if (isset($this->mapUnits[$x][$y]) || !$unit->canMoveTo($this->getView($x, $y))) {
             $this->randSetUnit($unit, --$try);
         } else {
-            echo "$x $y " . $unit->getId() . PHP_EOL;
             $this->mapUnits[$x][$y] = $unit;
         }
     }
